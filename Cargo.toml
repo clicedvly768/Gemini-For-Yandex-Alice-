@@ -1,0 +1,24 @@
+[package]
+name = "Gemini-for-alice"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.8", features = ["macros"] }
+base64 = "0.22"
+dotenvy = "0.15"
+reqwest = { version = "0.13", features = ["json", "form"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+url = "2.5"
+urlencoding = "2.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

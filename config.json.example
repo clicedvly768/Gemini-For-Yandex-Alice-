@@ -1,0 +1,21 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "gemini": {
+    "api_key": "YOUR_GEMINI_API_KEY_HERE",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_override": ""
+  },
+  "spotify": {
+    "client_id": "YOUR_SPOTIFY_CLIENT_ID_HERE",
+    "client_secret": "YOUR_SPOTIFY_CLIENT_SECRET_HERE",
+    "redirect_uri": "http://localhost:8080/auth/callback",
+    "refresh_token": ""
+  },
+  "bandcamp": {
+    "enabled": true,
+    "default_volume": 80
+  }
+}
